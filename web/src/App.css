@@ -1,6 +1,99 @@
 .App {
-  width: 100%;
-  
+  width: 100vw;
+  height: 100vh;
+
+  position: relative;
+}
+
+.App section {
+  position: absolute;
+  top: 80px;
+
+  width: 100vw;
+  padding: 10vh 0;
   text-align: center;
-  overflow: hidden;
+}
+
+.App section .logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  width: 320px;
+  margin: 28px auto 0;
+}
+
+.App section .logo-section > span {
+  position: absolute;
+  right: 38px;
+  bottom: 0;
+
+  color: #42A6F8;
+}
+
+.App section .searchBar {
+  display: flex;
+  justify-content: space-between;
+
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 0 16px;
+}
+
+.App section .searchBar > input {
+  width: 88%;
+  max-width: 700px;
+  height: 28px;
+  padding: 1px 6px;
+
+  border: 1px solid #CCC;
+
+  font-size: 16px;
+  outline: none;
+}
+
+.App section .searchBar > input:hover {
+  border-color: #B0B0B0;
+}
+
+.App section .searchBar > button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 74px;
+  height: 32px;
+
+  background-color: #4C8FFD;
+  border: 1px solid #3079ED;
+  cursor: pointer;
+}
+
+.App section .searchBar > button:hover {
+  background-color: #3079ED;
+  border: 1px solid #1463DD;
+}
+
+.App section > span {
+  font-size: 14px;
+}
+
+.App footer {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  padding: 8px 0;
+
+  text-align: center;
+  background-color: #f5f8fc;
+}
+
+.App footer > a {
+  font-weight: 700;
+  color: #42A6F8;
+}
+
+.App footer > a:hover {
+  color: #3079ED;
 }
