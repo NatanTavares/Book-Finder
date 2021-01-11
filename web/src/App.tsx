@@ -10,25 +10,30 @@ export default function App() {
 
   return (
     <div className="App">
-      <img src={Logo} alt="Google" width={200} />
-      <span>Livros</span>
+      <section>
+        <div className="logo-section">
+          <img src={Logo} alt="Google" width={272} />
+          <span>Livros</span>
+        </div>
 
-      <div className="searchBar">
-        <input 
-          type="text"
-          value={term}
-          onChange={event => setTerm(event.target.value)}
-        />
+        <div className="searchBar">
+          <input 
+            type="text"
+            value={term}
+            onChange={event => setTerm(event.target.value)}
+          />
 
-        <button>
-          <BiSearchAlt2 />
-        </button>
-      </div>
+          <button>
+            <BiSearchAlt2 size={20} color="#FFF" />
+          </button>
+        </div>
 
-      <span>O índice mais diversificado do mundo para pesquisar livros na íntegra.</span>
+        <span>O índice mais diversificado do mundo para pesquisar livros na íntegra.</span>
+      </section>
 
       <footer>
-        <p>NTS Labs</p>
+        <span>Developed by </span>
+        <a href="https://linktr.ee/NatanTavares" target="blank">NTS Labs</a>
       </footer>
     </div>
   );
