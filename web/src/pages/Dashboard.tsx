@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import Card from '../components/Card';
+
+import styled from 'styled-components';
 import { BiSearchAlt2 } from 'react-icons/bi';
 import Logo from '../assets/googleIcon.png';
-import styled from 'styled-components';
 
 export default function Dashboard() {
   return (
@@ -12,7 +14,6 @@ export default function Dashboard() {
         <Link to='/'>
           <img src={Logo} alt="Google" width={120} />
         </Link>
-
 
         <InputOnHeader>
           <Input 
@@ -28,21 +29,36 @@ export default function Dashboard() {
       </Header>
 
       <ul className="grid-books">
-        {/* this list of books is loaded after it is obtained from the api*/}
         <li>
-          <Link to='/detail:react.js'>React.js</Link>
+          <Card 
+            url="/detail:react.js"
+            // img="#"
+            volume="React.js"
+          />
         </li>
 
         <li>
-          <Link to='/detail:node.js'>Node.js</Link>
+          <Card 
+            url="/detail:node.js" 
+            // img="#" 
+            volume="Node.js"
+          />
         </li>
 
         <li>
-          <Link to='/detail:next.js'>Next.js</Link>
+          <Card 
+            url="/detail:next.js" 
+            // img="#"
+            volume="Next.js"
+          />
         </li>
 
         <li>
-          <Link to='/detail:next.js'>Angular.js</Link>
+          <Card 
+            url="/detail:angular.js" 
+            // img="#" 
+            volume="Angular.js"
+          />
         </li>
       </ul>
     </>
