@@ -1,34 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import Card from '../../components/Card/index';
 
 import { BiSearchAlt2 } from 'react-icons/bi';
 import Logo from '../../assets/googleIcon.png';
+import S from './styles';
 
 export default function Dashboard() {
+  const [term, setTerm] = useState('');
+
   return (
     <>
-      <header>
-        <Link to='/'>
-          <img src={Logo} alt="Google" width={120} />
-        </Link>
+      <S.Header>
+        <S.ContentHeader>
+          <Link to='/'>
+            <img src={Logo} alt="Google" width={120} />
+          </Link>
 
-        <div>
-          <input 
-            type="text"
-            value={'test'}
-            // onChange={event => setTerm(event.target.value)}
-          />
+          <S.InputOnHeader>
+            <S.Input 
+              type="text"
+              value={term}
+              onChange={event => setTerm(event.target.value)}
+            />
 
-          <button onClick={() => console.log('> [Fetch api]: test')}>
-            <BiSearchAlt2 size={20} color="#44F" />
-          </button>
-        </div>
-      </header>
+            <S.Button onClick={() => console.log('> [Fetch api]: test')}>
+              <BiSearchAlt2 size={20} color="#44F" />
+            </S.Button>
+          </S.InputOnHeader>
+        </S.ContentHeader>
+      </S.Header>
 
-      <div>
-        {/* <Card 
+      <S.Grid>
+        <Card 
           url="/detail:react"
           // img="#"
           volume="React"
@@ -57,7 +62,7 @@ export default function Dashboard() {
           // img="#" 
           volume="Vue.js"
         />
-
+      
         <Card 
           url="/detail:react native.js" 
           // img="#" 
@@ -71,11 +76,23 @@ export default function Dashboard() {
         />
 
         <Card 
-          url="/detail:typescript" 
+          url="/detail:node" 
           // img="#" 
-          volume="Typescript"
-        /> */}
-      </div>
+          volume="Node"
+        />
+
+        <Card 
+          url="/detail:orm" 
+          // img="#" 
+          volume="ORM"
+        />
+
+        <Card 
+          url="/detail:mongodb" 
+          // img="#" 
+          volume="MongoDB"
+        />
+      </S.Grid>
     </>
   );
 }

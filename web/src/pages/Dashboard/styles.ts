@@ -1,12 +1,17 @@
 import styled from 'styled-components';
 
 export const Header = styled.header`
+  border-bottom: 1px solid #C4C4C4;
+  padding: 12px 0 3px 0;
+`;
+
+export const ContentHeader = styled.div`
+  width: 90%;
+  max-width: 1300px;
+  margin: auto;
+
   display: flex;
   justify-content: space-between;
-
-  padding: 15px 30px 5px;
-
-  border-bottom: 1px solid #C4C4C4;
 `;
 
 export const InputOnHeader = styled.div`
@@ -33,7 +38,7 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
-  width: 34px;
+  width: 40px;
   height: 40px;
   
   border: none;
@@ -45,41 +50,25 @@ export const Button = styled.button`
 `;
 
 export const Grid = styled.div`
+  max-width: 1300px;
   width: 100vw;
 
-  background-color: blue;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-gap: .6rem;
+  grid-row-gap: 1.2rem;
+
+  justify-items: center;
+  margin: 30px auto 0;
 `;
 
-export const GridOfBooks = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-
-  list-style: none;
-  
-  max-width: 1000px;
-  margin: auto;
-  padding: 0;
-  
-  background-color: yellow;
-
-`;
-
-export const ItemOfGrid = styled.li`
-  margin: 30px 0;
-  padding:0;
-
-  background-color: red;
-`;
-
-const styles = {
-  Header, 
+const S = {
+  Header,
+  ContentHeader,
   InputOnHeader, 
   Input, 
   Button, 
-  Grid, 
-  GridOfBooks, 
-  ItemOfGrid
+  Grid,
 }
 
-export default styles;
+export default S;
