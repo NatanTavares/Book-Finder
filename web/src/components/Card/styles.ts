@@ -1,19 +1,55 @@
 import styled from 'styled-components';
 
 export const StyledCard = styled.div`
-text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-width: 220px;
-height: 280px;
-
-margin: 0;
-
-background-color: #e4e0e6;
-border-radius: 4px;
+  min-width: 74%;
+  max-width: 200px;
+  height: 260px;
+  
+  background-color: #F4F0F6;
+  border-radius: 6px;
+  box-shadow: 1px 1px 6px 3px #D0D0D0;
+  
+  transition: .4s;
+  &:hover {
+    background-color: #F0F0F0;
+    box-shadow: 1px 1px 6px 3px #AAA;
+  }
 `;
 
-const styles = {
-  StyledCard
+export const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 230px;
+  text-align: center;
+`;
+
+export const Cover = styled.img`
+  width: 150px;
+  border: solid 1px #E1E1E1;
+  border-radius: 4px;
+`;
+
+export const Volume = styled.h3`
+  color: #333;
+`;
+
+export const Link = {
+  textDecoration:'none',
+  color: '#292426',
 }
 
-export default styles;
+const S = {
+  StyledCard,
+  Content,
+  Cover,
+  Link
+}
+
+export default S;
