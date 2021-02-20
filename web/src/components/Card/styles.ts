@@ -6,13 +6,13 @@ export const StyledCard = styled.div`
   justify-content: center;
   align-items: center;
 
-  min-width: 74%;
+  min-width: 70%;
   max-width: 200px;
   height: 260px;
   
-  background-color: #F4F0F6;
-  border-radius: 6px;
-  box-shadow: 1px 1px 6px 3px #D0D0D0;
+  background-color: #F8F8F8;
+  border-radius: 3px;
+  box-shadow: 1px 1px 4px 2px #D0D0D0;
   
   transition: .4s;
   &:hover {
@@ -31,7 +31,9 @@ export const Content = styled.div`
 `;
 
 export const Cover = styled.img`
-  width: 150px;
+  max-width: 150px;
+  max-height: 196px;
+
   border: solid 1px #E1E1E1;
   border-radius: 4px;
 `;
