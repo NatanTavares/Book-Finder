@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const StyledCard = styled.div`
   display: flex;
@@ -9,15 +9,15 @@ export const StyledCard = styled.div`
   min-width: 70%;
   max-width: 200px;
   height: 260px;
-  
-  background-color: #F8F8F8;
+
+  background-color: #f8f8f8;
   border-radius: 3px;
-  box-shadow: 1px 1px 4px 2px #D0D0D0;
-  
-  transition: .4s;
+  box-shadow: 1px 1px 4px 2px #d0d0d0;
+
+  transition: 0.4s;
   &:hover {
-    background-color: #F0F0F0;
-    box-shadow: 1px 1px 6px 3px #AAA;
+    background-color: #f0f0f0;
+    box-shadow: 1px 1px 6px 3px #aaa;
   }
 `;
 
@@ -34,7 +34,7 @@ export const Cover = styled.img`
   max-width: 150px;
   max-height: 196px;
 
-  border: solid 1px #E1E1E1;
+  border: solid 1px #e1e1e1;
   border-radius: 4px;
 `;
 
@@ -43,15 +43,15 @@ export const Volume = styled.h3`
 `;
 
 export const Link = {
-  textDecoration:'none',
-  color: '#292426',
-}
+  textDecoration: "none",
+  color: "#292426",
+};
 
-const S = {
+const Styled = {
   StyledCard,
   Content,
   Cover,
-  Link
-}
+  Link,
+};
 
-export default S;
+export default Styled;
