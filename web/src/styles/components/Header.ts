@@ -49,7 +49,7 @@ export const Button = styled.button`
   cursor: pointer;
 `;
 
-const S = {
+const Styled = {
   Header,
   ContentHeader,
   InputOnHeader, 
@@ -57,4 +57,4 @@ const S = {
   Button
 }
 
-export default S;
+export default Styled;
