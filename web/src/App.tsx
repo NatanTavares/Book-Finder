@@ -1,18 +1,15 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
+import { BookProvider } from "./contexts/BookContext";
 
-import Home from "./pages/Home";
-import Dashboard from "./pages/Dashboard";
-import Detail from "./pages/Detail";
+import Routes from "./routes";
 
 export default function App() {
   return (
     <div className="App">
       <Router>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/dashboard" component={Dashboard} />
-          <Route path="/detail:volume" component={Detail} />
-        </Switch>
+        <BookProvider>
+          <Routes />
+        </BookProvider>
       </Router>
     </div>
   );
