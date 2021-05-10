@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { UseBook } from "../contexts/BookContext";
 import { Link } from "react-router-dom";
 
 import { BiSearchAlt2 } from "react-icons/bi";
@@ -7,8 +7,7 @@ import Logo from "../assets/googleIcon.png";
 import Styled from "../styles/components/Header";
 
 export default function Header() {
-  const [term, setTerm] = useState("");
-
+  const { term, handleTerm, fetchBooks } = UseBook();
   return (
     <Styled.Header>
       <Styled.ContentHeader>
@@ -20,10 +19,10 @@ export default function Header() {
           <Styled.Input
             type="text"
             value={term}
-            onChange={(event) => setTerm(event.target.value)}
+            onChange={(event) => handleTerm(event.target.value)}
           />
 
-          <Styled.Button onClick={() => console.log("> [Fetch api]: test")}>
+          <Styled.Button onClick={fetchBooks}>
             <BiSearchAlt2 size={20} color="#44F" />
           </Styled.Button>
         </Styled.InputOnHeader>

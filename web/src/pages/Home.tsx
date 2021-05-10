@@ -1,12 +1,12 @@
-import { useState } from "react";
-
-import Styled from "../styles/pages/Home";
+import { UseBook } from "../contexts/BookContext";
 
 import { BiSearchAlt2 } from "react-icons/bi";
 import Logo from "../assets/googleIcon.png";
 
+import Styled from "../styles/pages/Home";
+
 export default function Home() {
-  const [term, setTerm] = useState("");
+  const { term, handleTerm } = UseBook();
 
   return (
     <Styled.Section>
@@ -23,7 +23,7 @@ export default function Home() {
         <Styled.Input
           type="text"
           value={term}
-          onChange={(event) => setTerm(event.target.value)}
+          onChange={(event) => handleTerm(event.target.value)}
         />
 
         <Styled.SearchButton onClick={() => console.log(">[Fetch api]:", term)}>

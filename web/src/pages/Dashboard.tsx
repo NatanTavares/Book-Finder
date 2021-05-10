@@ -1,5 +1,5 @@
 import Header from "../components/Header";
-import Card from "../components/Card/index";
+import Card from "../components/Card";
 
 import Styled from "../styles/pages/Dashboard";
 
