@@ -1,34 +1,24 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Book Finder App
 
-## Getting Started
+Create an application that will allow users to search for books by entering a query (Title, Author, etc). Display the resulting books in a list on the page with all the corresponding data.
 
-First, run the development server:
+## User Stories
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- [ ] User can enter a search query into an `input` field
+- [ ] User can submit the query. This will call an API that will return an array of books with the corresponding data (**Title**, **Author**, **Published Date**, **Picture**, etc)
+- [ ] User can see the list of books appearing on the page
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Bonus features
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- [ ] For each item in the list add a link that will send the User to an external site which has more information about the book
+- [ ] Implement a Responsive Design
+- [ ] Add loading animations
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Useful links and resources
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+You can use the [Google Books API](https://developers.google.com/books/docs/overview)
 
-## Learn More
+## Example projects
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+[Book Finder](https://book-finder-by-deyl.netlify.com/)
+[Search Books](https://booksure.netlify.app/)# Book Finder App
