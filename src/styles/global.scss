@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #ffffff;
+  --gray-50: #f1f1f7;
+  --gray-300: #c4c4c4;
+  --gray-400: #acacac;
+  --gray-900: #121214;
+
+  --blue-600: #657eff;
+  --blue-550: #3b57e9;
+
+  --red-500: #f94949;
+
+  --yellow-500: #fbff2d;
+
+  --green-500: #36d24f;
+}
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
+body {
+  background: var(--white);
+  color: var(--gray-900);
+}
+
+body,
+input,
+textarea,
+select,
+button {
+  font: 400 1rem "Roboto", sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

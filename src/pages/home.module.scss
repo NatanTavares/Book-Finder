@@ -1,0 +1,73 @@
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  height: 100vh;
+
+  .logoContainer {
+    position: relative;
+    margin: 14vh 0 7vh;
+
+    img {
+      width: 20rem;
+    }
+
+    span {
+      position: absolute;
+
+      bottom: 0;
+      right: -1rem;
+
+      font-size: 1.125rem;
+      color: var(--blue-600);
+    }
+  }
+
+  .inputContainer {
+    display: flex;
+
+    width: 80vw;
+    max-width: 740px;
+    height: 2rem;
+
+    input {
+      flex: 1;
+      padding: 0 0.5rem;
+      margin-right: 1rem;
+
+      font-size: 1rem;
+
+      border: 1px solid var(--gray-300);
+      border-radius: none;
+
+      outline: none;
+      &:focus {
+        border: 2px solid var(--gray-400);
+      }
+    }
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      max-width: 100px;
+      min-width: 40px;
+      width: 10vw;
+
+      background: var(--blue-600);
+      border: 1px solid var(--blue-550);
+
+      transition: background 0.3s;
+      &:hover {
+        background: var(--blue-550);
+      }
+    }
+  }
+
+  p {
+    margin: 4vh 8vw;
+    text-align: center;
+  }
+}
