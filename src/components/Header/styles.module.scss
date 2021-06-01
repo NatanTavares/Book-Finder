@@ -1,0 +1,62 @@
+.container {
+  display: flex;
+  border-bottom: 1px solid var(--gray-50);
+
+  .content {
+    display: flex;
+    justify-content: space-around;
+
+    max-width: 1120px;
+    min-height: 40px;
+    padding: 2vh 4vw;
+
+    img {
+      max-width: 100px;
+      width: 25vw;
+    }
+
+    .inputContainer {
+      display: flex;
+
+      width: 60vw;
+      max-width: 740px;
+
+      margin: 0 2rem;
+
+      input {
+        flex: 1;
+        padding-left: 0.5rem;
+        margin-right: 1rem;
+
+        border: 1px solid var(--gray-300);
+        border-radius: 0px;
+        outline: none;
+
+        &:focus {
+          border: 1px solid var(--gray-400);
+        }
+      }
+
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        max-width: 60px;
+        min-width: 40px;
+        width: 20%;
+
+        background: var(--blue-600);
+        border: none;
+        border-radius: 0px;
+
+        border: 1px solid var(--blue-550);
+
+        transition: background 0.3s;
+        &:hover {
+          background: var(--blue-550);
+        }
+      }
+    }
+  }
+}
