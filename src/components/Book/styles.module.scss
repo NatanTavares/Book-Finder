@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  max-width: 300px;
+  min-width: 200px;
+  width: 30vw;
+  height: 300px;
+  padding: 1rem 0.5rem 0.5rem;
+
+  background: var(--gray-50);
+  border: 1px solid var(--gray-300);
+  border-radius: 0.25rem;
+
+  transition: filter 0.2s;
+
+  &:hover {
+    filter: brightness(0.9);
+  }
+
+  .thumbnailContainer {
+    display: flex;
+    align-items: center;
+
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin: auto 0;
+
+    img {
+      height: 100vh;
+      max-height: 240px;
+    }
+  }
+
+  .titleContainer {
+    width: 100%;
+    margin-top: auto;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+
+    font-size: 1.125rem;
+  }
+}
