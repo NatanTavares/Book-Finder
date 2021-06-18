@@ -1,32 +1,29 @@
-import { useRouter } from "next/router";
-import { useState } from "react";
+import { useSearchContext } from "../../hooks/SearchContext";
 
 import { BiSearchAlt2 } from "react-icons/bi";
 import styles from "./styles.module.scss";
 
 export function Header() {
-  const router = useRouter();
-  const [volume, setVolume] = useState("");
-
-  function handleNewVolumes() {
-    router.push(`/books/${volume}`);
-  }
+  const { searchTerm, handleSearchTerm, handleNewVolumes } = useSearchContext();
 
   return (
     <header className={styles.container}>
       <div className={styles.content}>
         <img src="/images/mainIcon.png" alt="Google" />
 
-        <div className={styles.inputContainer}>
+        <form
+          className={styles.inputContainer}
+          onSubmit={(event) => handleNewVolumes(event)}
+        >
           <input
             type="text"
-            onChange={(e) => setVolume(e.target.value)}
-            placeholder="Find any book"
+            value={searchTerm}
+            onChange={(e) => handleSearchTerm(e.target.value)}
           />
-          <button type="button" onClick={handleNewVolumes}>
+          <button type="button">
             <BiSearchAlt2 size={20} color="#FFF" />
           </button>
-        </div>
+        </form>
       </div>
     </header>
   );
