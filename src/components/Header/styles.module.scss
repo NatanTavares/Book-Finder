@@ -2,11 +2,14 @@
   display: flex;
   border-bottom: 1px solid var(--gray-50);
 
+  width: 100vw;
+
   .content {
     display: flex;
     justify-content: space-around;
 
     max-width: 1120px;
+    width: 100vw;
     min-height: 40px;
     padding: 2vh 4vw;
     margin: 0 auto;
@@ -22,12 +25,10 @@
       width: 60vw;
       max-width: 740px;
 
-      margin: 0 2rem;
-
       input {
         flex: 1;
         padding-left: 0.5rem;
-        margin-right: 1rem;
+        margin: 0 0.5rem;
 
         border: 1px solid var(--gray-300);
         border-radius: 0px;
@@ -44,7 +45,7 @@
         align-items: center;
 
         max-width: 60px;
-        min-width: 40px;
+        min-width: 30px;
         width: 20%;
 
         background: var(--blue-600);
