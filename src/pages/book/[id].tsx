@@ -14,7 +14,7 @@ type Book = {
     authors: String[];
     publishedDate: string;
     description: string;
-    categories: String[];
+    categories?: String[];
     language: string;
     previewLink: string;
     imageLinks: {
@@ -38,9 +38,14 @@ export default function Book({ book }: BookProps) {
         <Header />
 
         <section>
-          <div className={styles.thumbnailContainer}>
-            <img src={book.volumeInfo.imageLinks.thumbnail} alt="test" />
-          </div>
+          {!!book.volumeInfo.imageLinks?.thumbnail && (
+            <div className={styles.thumbnailContainer}>
+              <img
+                src={book.volumeInfo.imageLinks.thumbnail}
+                alt={book.volumeInfo.imageLinks.thumbnail}
+              />
+            </div>
+          )}
 
           <div className={styles.details}>
             <div className={styles.headerDetails}>
@@ -57,14 +62,23 @@ export default function Book({ book }: BookProps) {
               </div>
 
               <div className={styles.specifications}>
-                <div>
-                  <strong>Categories:</strong>
-                  <p>{book.volumeInfo.categories[0]}</p>
-                </div>
+                {!!book.volumeInfo.categories && (
+                  <div>
+                    <strong>Categories:</strong>
+
+                    {book.volumeInfo.categories.map((category, index) => (
+                      <p key={index}>{category}</p>
+                    ))}
+                  </div>
+                )}
+
                 <div>
                   <strong>Authors:</strong>
-                  <p>{book.volumeInfo.authors[0]}</p>
+                  {book.volumeInfo.authors?.map((author, index) => (
+                    <p key={index}>{author}</p>
+                  ))}
                 </div>
+
                 <div>
                   <strong>InfoLink:</strong>
                   <a href={`${book.volumeInfo.previewLink}`} target="blank">
@@ -74,9 +88,13 @@ export default function Book({ book }: BookProps) {
               </div>
             </div>
 
-            <article
-              dangerouslySetInnerHTML={{ __html: book.volumeInfo.description }}
-            />
+            {!!book.volumeInfo.description && (
+              <article
+                dangerouslySetInnerHTML={{
+                  __html: book.volumeInfo.description,
+                }}
+              />
+            )}
           </div>
         </section>
       </main>
@@ -86,11 +104,9 @@ export default function Book({ book }: BookProps) {
 
 export const getServerSideProps: GetServerSideProps = async (params) => {
   const { id } = params.query;
-
-  const res = await api.get<Book>(`${id}`);
-  const book = res.data;
+  const { data } = await api.get<Book>(`${id}`);
 
   return {
-    props: { book },
+    props: { book: data },
   };
 };
