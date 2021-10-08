@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Finder Books</title>
+        <title>Book Finde</title>
       </Head>
 
       <main className={styles.container}>
