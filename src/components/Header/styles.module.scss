@@ -6,15 +6,16 @@
 
   .content {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 
     max-width: 1120px;
     width: 100vw;
     min-height: 40px;
-    padding: 2vh 4vw;
+    padding: 2vh 0;
     margin: 0 auto;
 
-    img {
+    a > img {
+      cursor: pointer;
       max-width: 100px;
       width: 25vw;
     }

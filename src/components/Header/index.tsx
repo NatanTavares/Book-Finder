@@ -9,7 +9,9 @@ export function Header() {
   return (
     <header className={styles.container}>
       <div className={styles.content}>
-        <img src="/images/mainIcon.png" alt="Google" />
+        <a href="/">
+          <img src="/images/mainIcon.png" alt="Google" />
+        </a>
 
         <form
           className={styles.inputContainer}
